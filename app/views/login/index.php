@@ -1,4 +1,4 @@
-<?php require_once '/home/runner/cosc-4806-3/app/views/templates/headerPublic.php'?>
+<?php require_once '/home/runner/cosc-4806-4/app/views/templates/headerPublic.php'?>
 <main role="main" class="container">
     <div class="page-header" id="banner">
         <div class="row justify-content-center"> <!-- Center the content -->
@@ -28,4 +28,4 @@
         </div>
     </div>
 </main>
-<?php require_once '/home/runner/cosc-4806-3/app/views/templates/footer.php' ?>
+<?php require_once '/home/runner/cosc-4806-4/app/views/templates/footer.php' ?>

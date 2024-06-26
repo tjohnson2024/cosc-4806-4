@@ -2,7 +2,7 @@
 // Retrieve the username from the URL parameter
 $username = isset($_GET['username']) ? htmlspecialchars($_GET['username']) : '';
 
-require_once '/home/runner/cosc-4806-3/app/views/templates/header.php';
+require_once '/home/runner/cosc-4806-4/app/views/templates/header.php';
 ?>
 <div class="container" style="position:relative; top:50px;">
     <div class="page-header" id="banner">
@@ -37,4 +37,4 @@ require_once '/home/runner/cosc-4806-3/app/views/templates/header.php';
     </div>
 </div>
 <hr style="position:relative; top:120px;"> <!-- Horizontal line -->
-<?php require_once '/home/runner/cosc-4806-3/app/views/templates/footer.php'; ?>
+<?php require_once '/home/runner/cosc-4806-4/app/views/templates/footer.php'; ?>

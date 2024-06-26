@@ -1,5 +1,4 @@
 <?php
-
 class Reminders extends Controller {
   public function index(){
     $reminder = $this->model('Reminder');
@@ -7,7 +6,7 @@ class Reminders extends Controller {
     print_r( $reminders );
     die;
       
-    $this->view('reminders/index');
+    $this->view('app/views/reminders/index', ['reminders' => $reminders]);
   } 
 }
 ?>
