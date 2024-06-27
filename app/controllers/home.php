@@ -3,8 +3,6 @@ require_once 'app/models/User.php';
 
 class Home extends Controller {
 
-    
-    
     public function index() {
         // Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

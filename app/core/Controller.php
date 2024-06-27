@@ -1,5 +1,7 @@
 <?php
 
+require_once 'app/models/reminder.php';
+
 class Controller {
     
     public function model ($model) {
