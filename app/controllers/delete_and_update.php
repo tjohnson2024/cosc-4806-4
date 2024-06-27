@@ -27,7 +27,7 @@ class Delete_and_update extends Controller {
         } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Process update form submission
             $reminderId = $_POST['id'];
-            $newReminderText = trim($_POST['reminder']);
+            $newReminderText = trim($_POST['reminders']);
 
             // Example validation (add more as needed)
             if (empty($newReminderText)) {
@@ -36,7 +36,7 @@ class Delete_and_update extends Controller {
             }
 
             $reminderModel = $this->model('reminder');
-            $success = $reminderModel->update_reminder($reminderId, $newReminderText);
+            $success = $reminderModel->update_reminders($reminderId, $newReminderText);
 
             if ($success) {
                 // Redirect after successful update

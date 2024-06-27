@@ -20,13 +20,30 @@ public function __construct(){
     }
 
 
-  public function update_reminders() {
-   $db = db_connect();
-    $statement = $db->prepare("select * FROM notes;");
-    $statement->execute();
-    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
-    return $rows;
-  }  
+    public function update_reminders($reminderId, $updatedReminderText) {
+        try {
+            $db = db_connect();
+
+            // Prepare the SQL statement for update
+            $statement = $db->prepare("UPDATE notes SET reminders = :updatedReminderText WHERE id = :reminderId");
+
+            // Bind parameters
+            $statement->bindParam(':updatedReminderText', $updatedReminderText);
+            $statement->bindParam(':reminderId', $reminderId);
+
+            // Execute the statement
+            $statement->execute();
+
+            // Optionally, you can check if any rows were affected
+            return $statement->rowCount() > 0;
+
+        } catch (PDOException $e) {
+            // Handle database errors here
+            echo "Error updating reminder: " . $e->getMessage();
+            return false;
+        }
+    }
+
 
   public function create_reminder($reminderText) {
       try {
